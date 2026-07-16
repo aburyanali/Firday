@@ -1,0 +1,41 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Runtime data
+*.db
+*.sqlite
+*.sqlite3
+*.log
+/friday_audio.mp3
+
+# Node / frontend
+node_modules/
+.next/
+dist/
+build/
+out/
+coverage/
+
+# Editors and OS files
+.vscode/
+.idea/
+.DS_Store
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
