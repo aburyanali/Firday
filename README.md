@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=230&section=header&text=FRIDAY&fontSize=85&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=An%20Intelligent%2C%20Self-Aware%20AI%20Assistant%20Backend&descAlignY=56&descSize=18" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=230&section=header&text=FRIDAY&fontSize=85&fontColor=ffffff&animation=twinkling&fontAlignY=36&desc=An%20Intelligent%2C%20Self-Aware%20AI%20Assistant%20Backend&descAlignY=56&descSize=18" />
 
 <a href="#">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=23&pause=1000&color=2C9DDA&center=true&vCenter=true&width=750&lines=Real-Time+System-Aware+AI+Backend;Multi-Provider+LLM+Routing+%26+Auto-Failover;Reads+Its+Own+Codebase+for+Context;Persistent+Memory+%2B+Personality+Engine;%F0%9F%9A%A7+Actively+Being+Built+%E2%80%94+Not+Finished+%F0%9F%9A%A7" alt="Typing SVG" />
@@ -95,6 +95,14 @@ Every message goes through a full pipeline: intent classification → memory rec
 
 <br/>
 
+<div align="center">
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=15&duration=2200&pause=900&color=39FF88&background=0D1117FF&center=true&vCenter=true&repeat=true&width=780&height=45&lines=%24+message.received()+...+ok;%24+classify_intent()+-%3E+coding+(0.93);%24+memory.recall()+-%3E+4+facts+loaded;%24+project_context.scan()+-%3E+3+files+matched;%24+provider.route()+-%3E+primary+online;%24+verify_response()+-%3E+score+96%2F100;%24+stream.send()+-%3E+done+%E2%9C%93" alt="live pipeline trace" />
+</div>
+
+<div align="center"><sub>⬆️ a real turn through the pipeline, simulated live</sub></div>
+
+<br/>
+
 ## 🗂 Backend Structure
 
 <table width="100%">
@@ -185,11 +193,19 @@ flowchart TD
 
 </div>
 
-<br/>
+<img width="100%" height="6" src="https://capsule-render.vercel.app/api?type=rect&color=0:2c5364,50:203a43,100:0f2027&height=6" />
 
 ## 🧠 Request Classifier
 
 A rule-based classifier ranks 13 possible intents by priority and signal strength. Confidence starts at **0.45** and rises to **0.98** — it never overstates certainty.
+
+<div align="center">
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=15&duration=2400&pause=1100&color=FFB84D&center=true&vCenter=true&repeat=true&width=780&height=45&lines=%22review+this+code+for+bugs%22+-%3E+code_review+(0.88);%22what+is+recursion%3F%22+-%3E+knowledge+(0.81);%22should+I+use+fastapi+or+flask%22+-%3E+decision_making+(0.77);%22my+snake+game+keeps+crashing%22+-%3E+debugging+(0.90);%22write+me+a+short+poem%22+-%3E+creative+(0.85)" alt="live classifier ticker" />
+</div>
+
+<div align="center"><sub>⬆️ the classifier reasoning about a few sample messages</sub></div>
+
+<br/>
 
 <table width="100%">
 <tr><th width="8%">#</th><th width="27%">Intent</th><th width="65%">Detected From</th></tr>
@@ -293,7 +309,7 @@ After scoring, the response is also cleaned of generic AI disclaimers before it'
 
 **Core tone:** warm, attentive, emotionally aware, and collaborative — without tipping into overly sentimental.
 
-<br/>
+<img width="100%" height="6" src="https://capsule-render.vercel.app/api?type=rect&color=0:0f2027,50:203a43,100:2c5364&height=6" />
 
 ## 📡 Provider Routing
 
@@ -330,6 +346,12 @@ flowchart TD
 
 ⏱️ First-token timeout: **2 seconds** for hosted providers, **8 seconds** for the local model — a slow provider fails over quickly so a response always comes back.
 
+<div align="center">
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=15&duration=1800&pause=800&color=FF6B6B&center=true&vCenter=true&repeat=true&width=780&height=45&lines=routing+prompt+...;-%3E+primary%3A+hosted+model;-%3E+2.0s+timeout+exceeded;-%3E+failover%3A+local+model+engaged;-%3E+first+token+received;-%3E+stream+ok+%E2%9C%93" alt="live failover ticker" />
+</div>
+
+<div align="center"><sub>⬆️ what a failover actually looks like when the primary provider stalls</sub></div>
+
 <br/>
 
 ## 🏃 Live Telemetry
@@ -362,8 +384,11 @@ On startup, the system builds a situational greeting instead of a static one:
 <tr><td align="center">6</td><td>Streams it naturally to the user</td></tr>
 </table>
 
-> **Example of a real generated greeting:**
-> *"CPU's already at 68% and temperatures are up in the low 50s — the machine's been busy. Battery's at 34% and not charging, worth keeping the charger nearby."*
+**Example of a real generated greeting, typed out the way it streams to the user:**
+
+<div align="center">
+<img src="https://readme-typing-svg.demolab.com?font=Georgia&italic=true&weight=500&size=17&duration=4500&pause=2500&color=A9C4D6&center=true&vCenter=true&repeat=true&width=820&height=60&lines=CPU's+already+at+68%25+and+temps+are+up+in+the+low+50s+...;the+machine's+been+busy.+Battery's+at+34%25+and+not+charging%2C;worth+keeping+the+charger+nearby." alt="typed boot greeting" />
+</div>
 
 Nothing here is templated text — every greeting reflects the actual machine state at that moment.
 
@@ -396,6 +421,8 @@ Both sleep and wake responses are randomly picked from a small set of variations
 </table>
 
 <br/>
+
+<img width="100%" height="6" src="https://capsule-render.vercel.app/api?type=rect&color=0:2c5364,50:203a43,100:0f2027&height=6" />
 
 ## 🔴 Known Issues & Gaps
 
@@ -434,8 +461,12 @@ Both sleep and wake responses are randomly picked from a small set of variations
 
 <div align="center">
 
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=16&duration=3000&pause=1500&color=6C8CA6&center=true&vCenter=true&repeat=true&width=650&lines=git+commit+-m+%22still+not+done%22;git+push+origin+main" alt="closing typing" />
+
+<br/>
+
 ### Actively built, actively improved — and not finished yet.
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,50:203a43,100:0f2027&height=120&section=footer" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,50:203a43,100:0f2027&height=120&section=footer&animation=fadeIn" />
 
 </div>
